@@ -10,13 +10,11 @@ import numpy as np
 import pandas as pd
 import pickle
 
-dataset = pd.read_csv('clothes_size.csv')
+dataset = pd.read_csv('test_scores.csv')
 
+dataset['weeks_studied'].fillna(0, inplace=True)
 
-dataset['weight'].fillna(dataset['weight'].mean(), inplace=True)
-
-dataset['height'].fillna(dataset['height'].mean(), inplace=True)
-
+dataset['absences'].fillna(dataset['absences'].mean(), inplace=True)
 
 X = dataset.iloc[:, :3]
 
@@ -26,7 +24,7 @@ def convert_to_int(word):
                 'nine':9, 'ten':10, 'eleven':11, 'twelve':12, 'zero':0, 0: 0}
     return word_dict[word]
 
-##X['bed_room'] = X['bed_room'].apply(lambda x : convert_to_int(x))
+X['weeks_studied'] = X['weeks_studied'].apply(lambda x : convert_to_int(x))
 
 y = dataset.iloc[:, -1]
 
