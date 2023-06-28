@@ -13,13 +13,13 @@
 
 <body>
  <div class="login">
-	<h1>Predict Heart Failure</h1>
+	<h1>Predict Test Scores</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-		<input type="text" name="no_of_rooms" placeholder="Number of Rooms" required="required" />
-        <input type="text" name="area" placeholder="Area (in square feet)" required="required" />
-		<input type="text" name="house_age" placeholder="House Age" required="required" />
+		<input type="text" name="weeks_studied" placeholder="Number Weeks Studied (1 - 4)" required="required" />
+        <input type="text" name="age" placeholder="Age (12 - 19)" required="required" />
+		<input type="text" name="absences" placeholder="Number of Absences" required="required" />
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
