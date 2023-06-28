@@ -1,2 +1,2 @@
-# Data-Glacier-Intenship
+# Data-Glacier-Internship
 Summer 2023
