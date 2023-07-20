@@ -1,0 +1,13 @@
+file_type: csv
+dataset_name: file
+file_name: goodreads_interactions
+table_name: edsurv
+inbound_delimiter: ","
+outbound_delimiter: "|"
+skip_leading_rows: 1
+columns: 
+    - user_id
+    - book_id
+    - is_read
+    - rating
+    - is_reviewed
